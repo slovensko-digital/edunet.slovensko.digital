@@ -10,10 +10,6 @@
         line-height: 1.4;
     }
 
-    body * {
-        overflow-x: hidden;
-    }
-
     ::-moz-selection {
         background: #f9fff3;
         text-shadow: none;
