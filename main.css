@@ -112,6 +112,8 @@
             -moz-transition: all 0.2s ease-in-out;
             -o-transition: all 0.2s ease-in-out;
             transition: all 0.2s ease-in-out;
+            position: relative;
+            z-index: 999999;
         }
 
         [id="share"]:hover {
@@ -339,6 +341,13 @@
 
         [id="sharefooter"] {
             display: block;
+        }
+
+
+
+        main > aside {
+            padding: 100px 0;
+            overflow: hidden;
         }
 
     }

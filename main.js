@@ -4,11 +4,9 @@
 
     $(document).ready(function(){
 
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        if (window.innerWidth>1000) {
 
-            $("#main").fullpage();
-
-        } else {
+            console.info(window.innerWidth>1000)
 
             $("#main").fullpage({
                 navigationPosition: "right",
@@ -23,6 +21,7 @@
 
         }
 
+
     });
 
 
@@ -31,9 +30,11 @@
 
 
 
+
 (function(){
 
     "use strict";
+
 
     moment.locale("sk");
 
