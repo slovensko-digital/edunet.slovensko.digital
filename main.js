@@ -2,13 +2,9 @@
 
     "use strict";
 
-    var fn = function(){return;
-        //$.fn.fullpage.setAutoScrolling(window.outerWidth<1000);
-    };
+    $(document).ready(function(){
 
-    $(document).ready(function() {
-
-        var opts = {
+        $("#main").fullpage({
             navigationPosition: "right",
             scrollBar: true,
             navigation: true,
@@ -16,14 +12,10 @@
             fitToSection: (window.outerWidth<1000),
             scrollingSpeed: 500,
             anchors: [";pomozte", ";ministerstvo", ";odpocitanie", ";onas"],
-            menu: '#myMenu',
-            afterLoad: fn
-        };
-
-        $("#main").fullpage(opts);
+            menu: '#myMenu'
+        });
 
     });
-
 
 })();
 
