@@ -6,10 +6,7 @@
 
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
-            $("#main").fullpage({
-                autoScrolling: false,
-                fitToSection: false
-            });
+            $("#main").fullpage();
 
         } else {
 
