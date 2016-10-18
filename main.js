@@ -2,6 +2,17 @@
 
     "use strict";
 
+    var fn = function(){
+        if (outerWidth<1000) {
+            $.fn.fullpage.setAutoScrolling(false);
+            $.fn.fullpage.setFitToSection(false);
+        } else {
+            $.fn.fullpage.setAutoScrolling(true);
+            $.fn.fullpage.setFitToSection(true);
+        }
+    }
+
+
     $(document).ready(function() {
 
         var opts = {
@@ -14,19 +25,12 @@
         };
 
         $("#main").fullpage(opts);
+
+        fn()
+
     });
 
-
-    $(window).resize(function(){
-        if (outerWidth<1000) {
-            $.fn.fullpage.setAutoScrolling(false);
-            $.fn.fullpage.setFitToSection(false);
-        } else {
-            $.fn.fullpage.setAutoScrolling(true);
-            $.fn.fullpage.setFitToSection(true);
-        }
-    });
-
+    $(window).resize(fn);
 
 })();
 
