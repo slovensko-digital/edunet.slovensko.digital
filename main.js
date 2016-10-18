@@ -4,18 +4,31 @@
 
     $(document).ready(function(){
 
-        $("#main").fullpage({
-            navigationPosition: "right",
-            scrollBar: true,
-            navigation: true,
-            autoScrolling: (window.outerWidth<1000),
-            fitToSection: (window.outerWidth<1000),
-            scrollingSpeed: 500,
-            anchors: [";pomozte", ";ministerstvo", ";odpocitanie", ";onas"],
-            menu: '#myMenu'
-        });
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
+            $("#main").fullpage({
+                autoScrolling: false,
+                fitToSection: false
+            });
+
+        } else {
+
+            $("#main").fullpage({
+                navigationPosition: "right",
+                scrollBar: true,
+                navigation: true,
+                autoScrolling: false,
+                fitToSection: false,
+                scrollingSpeed: 500,
+                anchors: [";pomozte", ";ministerstvo", ";odpocitanie", ";onas"],
+                menu: '#myMenu'
+            });
+
+        }
 
     });
+
+
 
 })();
 
