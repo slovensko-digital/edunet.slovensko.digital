@@ -59,7 +59,7 @@
         if (duration.minutes()===1){ str += "minútu" }
         if (duration.minutes()>1 && duration.minutes()<5){ str += "minúty" }
 
-        $("#count").text(str + "!");
+        $(".counter").text(str);
 
     }, 1000);
 
