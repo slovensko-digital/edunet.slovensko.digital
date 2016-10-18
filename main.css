@@ -49,7 +49,7 @@
 
 
 
-    [id="share"] {
+    [id="share"]{
         background: white;
         position: fixed;
         top: 10px;
@@ -90,6 +90,26 @@
         }
 
 
+    [id="sharefooter"] {
+        display: none;
+        background: #f7da82;
+        padding: 22px 0;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 26px;
+    }
+
+        [id="sharefooter"] img {
+            width: 34px;
+            margin-right: 7px;
+        }
+
+        [id="sharefooter"] span {
+            position: relative;
+            display: inline-block;
+            top: -4px;
+            font-weight: 800;
+        }
 
 
 
@@ -304,6 +324,18 @@
 
         #fp-nav.right {
             right: 3px !important; /* an edit of fullpage.js */
+        }
+
+        [id="share"] {
+            position: static;
+            width: 100%;
+            padding: 13px 10px 8px;
+            display: block;
+            text-align: center;
+        }
+
+        [id="sharefooter"] {
+            display: block;
         }
 
     }
