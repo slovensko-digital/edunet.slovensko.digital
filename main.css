@@ -49,45 +49,7 @@
 
 
 
-    [id="share"]{
-        background: white;
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        z-index: 1;
-        padding: 10px 20px 3px 10px;
-        text-decoration: none;
-        color: #231f20;
-        opacity: 0.8;
-        text-transform: uppercase;
-        cursor: pointer !important;
-        -webkit-transition: all 0.2s ease-in-out;
-        -moz-transition: all 0.2s ease-in-out;
-        -o-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out;
-    }
 
-        [id="share"]:hover {
-            background: white;
-            opacity: 1;
-            color: black;
-            -webkit-transition: all 0.2s ease-in-out;
-            -moz-transition: all 0.2s ease-in-out;
-            -o-transition: all 0.2s ease-in-out;
-            transition: all 0.2s ease-in-out;
-        }
-
-        [id="share"] img {
-            width: 34px;
-            margin-right: 7px;
-        }
-
-        [id="share"] span {
-            position: relative;
-            display: inline-block;
-            top: -4px;
-            font-weight: 800;
-        }
 
 
     [id="sharefooter"] {
@@ -132,6 +94,48 @@
             width: 140px;
             float: left;
             margin: 17px 60px 28px 0;
+        }
+
+        [id="share"]{
+            background: white;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1;
+            padding: 10px 20px 3px 10px;
+            text-decoration: none;
+            color: #231f20;
+            opacity: 0.8;
+            text-transform: uppercase;
+            cursor: pointer !important;
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+        }
+
+        [id="share"]:hover {
+            background: white;
+            opacity: 1;
+            color: black;
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+        }
+
+        [id="share"] img {
+            width: 34px;
+            margin-right: 7px;
+            margin: 0;
+            float: none;
+        }
+
+        [id="share"] span {
+            position: relative;
+            display: inline-block;
+            top: -4px;
+            font-weight: 800;
         }
 
 
@@ -328,7 +332,6 @@
 
         [id="share"] {
             position: static;
-            width: 100%;
             padding: 13px 10px 8px;
             display: block;
             text-align: center;
