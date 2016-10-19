@@ -6,8 +6,6 @@
 
         if (window.innerWidth>1000) {
 
-            console.info(window.innerWidth>1000)
-
             $("#main").fullpage({
                 navigationPosition: "right",
                 scrollBar: true,
@@ -29,40 +27,50 @@
 })();
 
 
-
-
 (function(){
 
     "use strict";
 
-
     moment.locale("sk");
 
-    setInterval(function(){
-
+    var updateTime = function() {
         var diffTime = moment(+moment()).unix() - moment("2016-02-03 11:11:00").unix();
         var duration = moment.duration(diffTime*1000, "milliseconds");
         duration = moment.duration(duration-1000, "milliseconds");
 
-        var str = "";
+        var parts = [
+            duration.days() + duration.years()*365 + duration.months()*30 + " dní"
+        ];
+        var str;
 
-        str += duration.days() + duration.years()*365 + duration.months()*30 + " dní, ";
+        if (duration.hours() > 0)
+        {
+            str = duration.hours() + " ";
+            if (duration.hours()===0 || duration.hours()>4){ str += "hodín" }
+            if (duration.hours()===1){ str += "hodinu" }
+            if (duration.hours()>1 && duration.hours()<5){ str += "hodiny" }
 
-        str += duration.hours() + " ";
-        if (duration.hours()===0 || duration.hours()>4){ str += "hodín" }
-        if (duration.hours()===1){ str += "hodinu" }
-        if (duration.hours()>1 && duration.hours()<5){ str += "hodiny" }
-        str += " a ";
+            parts.push(str);
+        }
 
-        str += duration.minutes() + " ";
-        if (duration.minutes()===0 || duration.minutes()>4){ str += "minút" }
-        if (duration.minutes()===1){ str += "minútu" }
-        if (duration.minutes()>1 && duration.minutes()<5){ str += "minúty" }
+        if (duration.minutes() > 0)
+        {
+            str = duration.minutes() + " ";
+            if (duration.minutes()>4){ str += "minút" }
+            if (duration.minutes()===1){ str += "minútu" }
+            if (duration.minutes()>1 && duration.minutes()<5){ str += "minúty" }
 
-        $(".counter").text(str);
+            parts.push(str);
+        }
 
-    }, 1000);
+        var last = parts.pop();
 
+        $(".counter").text(parts.join(', ') + (parts.length > 0 ? ' a ' : '') + last);
+
+        setTimeout(updateTime, 1000);
+    };
+
+    updateTime();
 })();
 
 
