@@ -12,7 +12,7 @@
                 navigationPosition: "right",
                 scrollBar: true,
                 navigation: true,
-                autoScrolling: false,
+                autoScrolling: true,
                 fitToSection: false,
                 scrollingSpeed: 500,
                 anchors: [";pomozte", ";ministerstvo", ";odpocitanie", ";onas"],
