@@ -85,6 +85,7 @@
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-69285708-6', 'auto');
+    ga('set', 'anonymizeIp', true);
     ga('send', 'pageview');
 
 })();
